@@ -14,8 +14,8 @@ Existe duas modalidade de jogo:
 
 O intuito do computador é:
 
--Fazer uma das 8 combinações possiveis;
+    -Fazer uma das 8 combinações possiveis;
 
--Jogar de forma aletoria quando não hover possibiliade de uma combinação;
+    -Jogar de forma aletoria quando não hover possibiliade de uma combinação;
 
--Ele não consegue impedir o jogador de fazer alguma combinação;
+    -Ele não consegue impedir o jogador de fazer alguma combinação;
