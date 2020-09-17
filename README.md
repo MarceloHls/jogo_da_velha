@@ -12,7 +12,7 @@ Existe duas modalidade de jogo:
 
 
 
-O intuito do computador é;
+O intuito do computador é:
 
 -Fazer uma das 8 combinações possiveis;
 
