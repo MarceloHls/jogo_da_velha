@@ -2,11 +2,15 @@
 
 Projeto feito utilizando HTML,CSS(responsivo) e JavaScript.
 
+
+
 Existe duas modalidade de jogo:
 
 -Player vs Player;
 
 -Player vs Computador;
+
+
 
 O intuito do computador é;
 
