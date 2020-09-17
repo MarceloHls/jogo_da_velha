@@ -5,3 +5,8 @@
     color: #000;
     display: none;
 }
+
+@media(max-witdh:500px){
+    .cursor{
+        display:none;
+}
