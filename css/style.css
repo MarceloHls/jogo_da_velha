@@ -1,0 +1,384 @@
+:root {
+    --primary-color: linear-gradient(to right, rgb(0, 201, 255), rgb(146, 254, 157));
+    --terceira-cor:rgb(179, 219, 219);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    position: relative;
+    z-index: 10;
+    color: #000;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background: var(--primary-color);
+    overflow: hidden;
+}
+
+header {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #3EB9B2;
+    box-shadow: 0px 2px 5px 1px black
+}
+footer{
+    text-align: center;
+}
+
+.inicio {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+}
+
+.inicio .container {
+    height: 50%;
+    width: 30%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+    min-width: 260px;
+    background:var(--terceira-cor);
+    opacity: 8;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 10px black;
+}
+.inicio .container input{
+    background:black;
+    color: var(--terceira-cor);
+    border: 0;
+    width: 170px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.inicio .container .pages {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.botoes-pretos{
+    background-color: black;
+    color: var(--terceira-cor);
+    
+    border:0
+}
+.botoes-pretos:hover{
+    box-shadow: 0px 0px 10px 5px black;
+
+}
+
+.botoes-linha{
+    background: var(--terceira-cor);
+    border: 0;
+    color: black;
+    font-size: 20px;
+    text-decoration: underline black;
+}
+
+.botão-não-selecionado{
+    opacity: 0.5;
+    background-color: rgba(34, 33, 33, 0.479);
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    border: 0;
+}
+
+.inicio .container .botões {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+}
+
+
+.inicio .container .pages .opçoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+}
+
+.inicio .container .pages .opçoes button {
+    margin-top: 25px;
+    height: 60px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.inicio .container .pages .dados {
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+
+.inicio .container .pages .dados .playerOne, .inicio .container .pages .dados .playerTwo {
+    padding: 0;
+    margin: auto;
+    height: 38%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.inicio .container .pages .dados .playerTwo {
+    margin-top: 2%;
+}
+
+.inicio .container .pages .dados .titulo {
+    text-align: center;
+}
+
+.inicio .container .pages .dados .seletores {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+
+
+.selecionado {
+    background-color: black;
+    opacity: 1;
+    color: var(--terceira-cor);
+    box-shadow: 0px 2px 5px 1px black
+}
+
+.vez{
+
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+.voltar {
+    display: none;
+}
+
+.jogar{
+    background: black;
+    color:rgb(179, 219, 219);
+    border-radius: 5px;
+    font-size: 3rem;
+    height: 40px;
+    width: 200px;
+    font-size: 2rem;
+    border: 0;
+    align-self: center;
+}
+
+.jogar:hover{
+    opacity: 0.8;
+}
+
+/* ******************************************************** */
+
+.game {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+    min-height: 550px;
+    opacity: 0.2;
+    transition: opacity 2s;
+}
+
+
+
+.tabuleiro {
+    width: 60%;
+    height: 100%;
+}
+
+.tabuleiro .itens {
+    height: 70%;
+    width: 80%;
+    margin: 10% auto;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.tabuleiro .itens .linha {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.tabuleiro .itens .linha .item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+}
+
+.tabuleiro .itens .linha .item:hover {
+background: darkcyan;
+}
+
+#meio {
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+    ;
+}
+
+#item-2, #item-8, #item-5 {
+    border-left: solid 1px black;
+    border-right: solid 1px black;
+}
+
+.game .estatísticas {
+    margin: auto;
+    height: 80%;
+    width: 37%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game .estatísticas .jogador-2-PC, .game .estatísticas .jogador-1 {
+    display: flex;
+    align-items: center;
+    height: 35px;
+    width: 100%;
+    margin: 2% 7%;
+    border-radius: 10px;
+    padding: 5px;
+    background: black;
+    font-size: 2rem;
+    color: #3EB9B2;
+    box-shadow: 0px 0px 05px 05px black;
+}
+
+.game .estatísticas .jogador-1 div, .game .estatísticas .jogador-2-PC div {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 40%;
+}
+
+.game .estatísticas span {
+    margin-left: 20%;
+}
+
+.game .estatísticas .botões {
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.game .estatísticas .botões button {
+    background: black;
+    box-shadow: 0px 0px 2px 2px black;
+    border: 0;
+    color: #3EB9B2;
+    height: 50px;
+    width: 150px;
+    font-size: 17px;
+    border-radius: 5px;
+}
+
+.game .estatísticas .botões button:hover {
+ opacity: 0.7;
+ 
+}
+
+@media(max-width:800px) {
+    .game {
+        flex-direction: column;
+    }
+    .inicio .container {
+        width: 80%;
+    }
+    .tabuleiro {
+        width: 100%;
+        height: 80%;
+    }
+    .tabuleiro .itens {
+        height: 70%;
+        width: 70%;
+        margin: 10% auto;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .game .estatísticas {
+        height: 30%;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+    .game .estatísticas .jogador-2-PC, .game .estatísticas .jogador-1 {
+        display: flex;
+        height: 20px;
+        margin: 10px;
+        border-radius: 10px;
+        padding: 5px;
+        font-size: 1rem;
+    }
+    .game .estatísticas .jogador-1 div, .game .estatísticas .jogador-2-PC div {
+        height: 100%;
+        width: 40%;
+    }
+    .game .estatísticas span {
+        margin-left: 20%;
+    }
+    .game .estatísticas .botões {
+        margin-top: 10%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .game .estatísticas .botões button {
+        height: 35px;
+        width: 140px;
+        font-size: 15px;
+        margin: 10px;
+        
+    }
+    .game .estatísticas {
+        margin-top: -75px;
+    }
+    .tabuleiro .itens .linha .item:hover {
+        background-color: var(--primary-color);
+        box-shadow: 0px 0px 0px 0px white;
+    }
+
+
+}

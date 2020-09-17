@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cursor.css">
+    <link rel="stylesheet" href="css/alert.css">
+
+</head>
+
+<body>
+    <header id="oi">Jogo da Velha</header>
+    <div class="inicio">
+        <div class="container">
+            <div class="pages">
+                <div class="opçoes">
+                    <button class="p-p botoes-pretos">Jogador vs Jogador
+                    </button>
+                    <button class="p-m botoes-pretos">Jogador vs Maquina</button>
+                </div>
+                <div class="dados">
+                    <div class="playerOne">
+
+
+                        <div class="seletores">
+                            <input type="text" placeholder="Nome Jogador 1" maxlength="10">
+                            <div class="botoes">
+                                <button class="simbolo botão-não-selecionado" valor='p1-x' adicionar='p2-o'>X</button>
+                                <button class="simbolo botão-não-selecionado" valor='p1-o' adicionar='p2-x'>O</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="playerTwo">
+
+
+                        <div class="seletores">
+                            <input type="text" placeholder="Nome Jogador 2" maxlength="10">
+                            <div class="botoes">
+                                <button class="simbolo botão-não-selecionado" valor='p2-x' adicionar='p1-o '>X</button>
+                                <button class="simbolo botão-não-selecionado" valor='p2-o' adicionar='p1-x'>O</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="jogar()" class="jogar">Jogar</button>
+                </div>
+            </div>
+            <div class="botões">
+                <button onclick="jogar()" class="botoes-linha">
+                    <p>Pular</p>
+                </button>
+                <button onclick="voltar()" class="voltar botoes-linha">
+                    <p>Voltar</p>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="game">
+        <div class="tabuleiro">
+            <div class="itens">
+                <div class="linha">
+                    <div id="item-1" class="item" valor=0></div>
+                    <div id="item-2" class="item" valor=0></div>
+                    <div id="item-3" class="item" valor=0></div>
+                </div>
+                <div class="linha" id="meio">
+                    <div id="item-4" class="item" valor=0></div>
+                    <div id="item-5" class="item" valor=0></div>
+                    <div id="item-6" class="item" valor=0></div>
+                </div>
+                <div class="linha">
+                    <div id="item-7" class="item" valor=0></div>
+                    <div id="item-8" class="item" valor=0></div>
+                    <div id="item-9" class="item" valor=0></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="estatísticas">
+
+            <div class="jogador-1 ">
+
+                <div class="nome">
+
+                </div>
+                <span class="pontos">0</span>
+                <span class="simbolo">X</span>
+            </div>
+
+            <div class="jogador-2-PC vez">
+
+                <div class="nome">
+
+
+                </div>
+                <span class="pontos">0</span>
+                <span class="simbolo">O</span>
+            </div>
+            <div class="botões">
+                <button onclick="reinicarPartida()">Reiniciar Partida</button>
+                <button onclick="reinicarJogo()">Reiniciar Jogo</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="ocupar-tudo">
+        <div class="alert">
+            <p>Exemplo de msg</p>
+            <button onclick="ok()" >Ok</button>
+        </div>
+    </div>
+    <div class="cursor"></div>
+    <footer><a href="https://github.com/MarceloHls">By MarceloHls</a></footer>
+
+</body>
+<script src="script/animaInicio.js"></script>
+<script src="script/estatisticas.js"></script>
+<script src="script/tabuleiro.js"></script>
+<script src="script/animaTabuleiro.js"></script>
+<script src="script/ia.js"></script>
+<script src="script/reset.js"></script>
+<script src="script/alert.js"></script>
+<script src="script/cursor.js"></script>
+
+</html>

@@ -1,0 +1,7 @@
+.cursor{
+    position: absolute;
+
+    font-size: 50px;
+    color: #000;
+    display: none;
+}
