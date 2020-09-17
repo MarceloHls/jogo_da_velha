@@ -6,7 +6,9 @@
     display: none;
 }
 
-@media(max-witdh:500px){
-    .cursor{
-        display:none;
+@media(max-width:700px) {
+    .cursor {
+        left: 0;
+        font-size: 0;
+    }
 }
